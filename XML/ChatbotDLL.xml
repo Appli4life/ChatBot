@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChatBot.DLL</name>
+    </assembly>
+    <members>
+        <member name="T:Chatbot.DLL.BotEngine">
+            <summary>
+            BotEngine Klasse
+            </summary>
+        </member>
+        <member name="F:Chatbot.DLL.BotEngine.storage">
+            <summary>
+            Speicher
+            </summary>
+        </member>
+        <member name="F:Chatbot.DLL.BotEngine.Messages">
+            <summary>
+            Liste Aller Messages
+            </summary>
+        </member>
+        <member name="M:Chatbot.DLL.BotEngine.GetAntwort(System.String@)">
+            <summary>
+            Antwort anhand des Schlüsselwortes herausfinden, mit der Storage.txt Datei
+            </summary>
+            <returns>Die Antwort zum Aktuellen Schlüsselwort</returns>
+            <exception cref="T:Chatbot.DLL.SWNotFoundException"></exception>
+        </member>
+        <member name="T:Chatbot.DLL.Course">
+            <summary>
+            Verlauf Klasse
+            </summary>
+        </member>
+        <member name="F:Chatbot.DLL.Course.pfad">
+            <summary>
+            String für den Pfad des Verlaufs
+            </summary>
+        </member>
+        <member name="F:Chatbot.DLL.Course.verlauf">
+            <summary>
+            Letzte Eingaben
+            </summary>
+        </member>
+        <member name="M:Chatbot.DLL.Course.Verlaufschreiben(System.String)">
+            <summary>
+             Verlauf Textdatei erneuern
+            </summary>
+            <param name="v">Verlauf</param>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Chatbot.DLL.Course.Verlauflöschen">
+            <summary>
+            Verlauflöschen
+            </summary>
+        </member>
+        <member name="M:Chatbot.DLL.Course.Verlaufanzeigen">
+            <summary>
+            Verlauf anzeigen (Verlaufdatei öffnen)
+            </summary>
+        </member>
+        <member name="M:Chatbot.DLL.Course.VerlaufArraySchieben(System.String@)">
+            <summary>
+            Jedes Stellen in dem Array eins nach hinten Verschieben
+            </summary>
+            <param name="eingabe">Neuste Eingabe</param>
+        </member>
+        <member name="T:Chatbot.DLL.IMessage">
+            <summary>
+            Interface IMessage
+            </summary>
+        </member>
+        <member name="P:Chatbot.DLL.IMessage.Schlüsselwort">
+            <summary>
+            Schlüsselwort
+            </summary>
+        </member>
+        <member name="P:Chatbot.DLL.IMessage.Antwort">
+            <summary>
+            Antwort
+            </summary>
+        </member>
+        <member name="T:Chatbot.DLL.IStorage">
+            <summary>
+            Interface ILoad
+            </summary>
+        </member>
+        <member name="M:Chatbot.DLL.IStorage.Aktualisieren">
+            <summary>
+            Aktualisieren
+            </summary>
+        </member>
+        <member name="M:Chatbot.DLL.IStorage.Hinzufügen(System.String,System.String)">
+            <summary>
+            Hinzufügen
+            </summary>
+            <param name="s">Schlüsselwort</param>
+            <param name="a">Antwort</param>
+        </member>
+        <member name="T:Chatbot.DLL.Message">
+            <summary>
+            Message Klasse
+            </summary>
+        </member>
+        <member name="F:Chatbot.DLL.Message.schlüsselwort">
+            <summary>
+            Eingegebenes Schlüsselwort
+            </summary>
+        </member>
+        <member name="F:Chatbot.DLL.Message.antwort">
+            <summary>
+            Antwort basierend auf dem Schlüsselwort
+            </summary>
+        </member>
+        <member name="M:Chatbot.DLL.Message.#ctor">
+            <summary>
+            Ctor
+            </summary>
+        </member>
+        <member name="M:Chatbot.DLL.Message.#ctor(System.String@,System.String@)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="sw">Schlüsselwort</param>
+            <param name="an">Antwort</param>
+        </member>
+        <member name="T:Chatbot.DLL.Storage">
+            <summary>
+            Storage Klasse
+            </summary>
+        </member>
+        <member name="F:Chatbot.DLL.Storage.pfad">
+            <summary>
+            String für den Pfad des Speichers
+            </summary>
+        </member>
+        <member name="F:Chatbot.DLL.Storage.Messages">
+            <summary>
+            String Array für alle Schlüsselwörter und Antworten
+            </summary>
+        </member>
+        <member name="M:Chatbot.DLL.Storage.Aktualisieren">
+            <summary>
+            Speicherdatei suchen und falls vorhanden in ein Array speichern
+            </summary>
+            <exception cref="T:System.IO.FileNotFoundException"></exception>
+        </member>
+        <member name="M:Chatbot.DLL.Storage.Hinzufügen(System.String,System.String)">
+            <summary>
+            Schlüsselwort Hinzufügen
+            </summary>
+            <param name="s">Schlüsselwort</param>
+            <param name="a">Antwort</param>
+        </member>
+        <member name="M:Chatbot.DLL.Storage.Dateierstellen">
+            <summary>
+            Speicherdatei erstellen oder falls vorhanden überschreiben
+            </summary>
+        </member>
+        <member name="M:Chatbot.DLL.Storage.Dateilöschen">
+            <summary>
+            Speicherdatei falls vorhanden löschen
+            </summary>
+        </member>
+        <member name="T:Chatbot.DLL.SWNotFoundException">
+            <summary>
+            Schlüsselwort nicht Gefunden
+            </summary>
+        </member>
+    </members>
+</doc>
