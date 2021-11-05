@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
@@ -7,6 +8,9 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using Chatbot.DLL;
+using ChatBot.DLL;
+using Microsoft.VisualBasic;
+using System.Data.SqlClient;
 
 namespace Chatbot2
 {
@@ -27,6 +31,7 @@ namespace Chatbot2
         string s = "";
         int i = 0;
         int l = 0;
+        string passwort;
         const string dateierstellt = "Eine Speicherdatei wurde erstellt.";
         const string dateigelöscht = "Die Speicherdatei wurde falls vorhanden gelöscht!";
         Storage.DelHinzufügen hinzu = BotEngine.storage.Hinzufügen;
@@ -34,9 +39,10 @@ namespace Chatbot2
         //Storage.DelLöschen lösch = BotEngine.storage.Löschen;
 
         public MainWindow()
-        {
+        { 
             InitializeComponent();
         }
+        
 
         #endregion
 
@@ -44,7 +50,7 @@ namespace Chatbot2
         // Senden Button
         private void senbut_Click(object sender, RoutedEventArgs e)
         {
-
+        
             // Für den Verlauf
             string aktuellekonversation;
             string eingabe = writebox.Text;

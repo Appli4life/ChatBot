@@ -33,7 +33,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <TextBox  x:Name="writebox" VerticalContentAlignment="Center" Margin="3" TextWrapping="Wrap" Text=". . . " FontSize="22" TextChanged="writebox_TextChanged" BorderThickness="4" Foreground="black" BorderBrush="#FF9EDA55" Background="White" KeyDown="writebox_KeyDown" Grid.Row="6" Grid.Column="2" PreviewKeyDown="writebox_PreviewKeyDown">
+        <TextBox  x:Name="writebox" VerticalContentAlignment="Center" Margin="45,3,3,3" TextWrapping="Wrap" Text=". . . " FontSize="22" TextChanged="writebox_TextChanged" BorderThickness="4" Foreground="black" BorderBrush="#FF9EDA55" Background="White" KeyDown="writebox_KeyDown" Grid.Row="6" Grid.Column="2" PreviewKeyDown="writebox_PreviewKeyDown">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="7"/>
