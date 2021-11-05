@@ -484,9 +484,9 @@ namespace Chatbot2
 
                 
             }
-            catch (Exception e)
+            catch (Exception es)
             {
-                Fehler(e);
+                Fehler(es);
             }
 
         }
