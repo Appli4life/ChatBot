@@ -39,10 +39,10 @@ namespace Chatbot2
         //Storage.DelLöschen lösch = BotEngine.storage.Löschen;
 
         public MainWindow()
-        { 
+        {
             InitializeComponent();
         }
-        
+
 
         #endregion
 
@@ -50,7 +50,7 @@ namespace Chatbot2
         // Senden Button
         private void senbut_Click(object sender, RoutedEventArgs e)
         {
-        
+
             // Für den Verlauf
             string aktuellekonversation;
             string eingabe = writebox.Text;
@@ -122,7 +122,7 @@ namespace Chatbot2
                 {
                     if (i != 0)
                     {
-                        if (eingabe == Course.verlauf[i -1])
+                        if (eingabe == Course.verlauf[i - 1])
                         {
                             goto skip;
                         }
@@ -140,7 +140,7 @@ namespace Chatbot2
                         l++;
                     }
 
-                    skip:
+                skip:
 
                     hinzufügen = false;
                     antwort = false;
@@ -470,6 +470,24 @@ namespace Chatbot2
                 Fehler(ex);
             }
 
+
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (SQL.connect == true)
+                {
+                    throw new Exception("Datenbank bereits Verbunden!");
+                }
+                string connstring = $"server={SQL.ip};userid=appabfrage";
+
+                
+            }
+            catch (Exception e)
+            {
+                Fehler(e);
+            }
 
         }
 

@@ -15,7 +15,12 @@ namespace ChatBot.DLL
         /// <summary>
         /// IP Adresse der Internetbox
         /// </summary>
-        public static string path { get; } = "192.168.1.125";
+        public static string ip { get; } = "192.168.1.125";
+
+        /// <summary>
+        /// Datenbank verbunden oder nicht
+        /// </summary>
+        public static bool connect = false;
 
         /// <summary>
         /// Fragt den Boolean in der Tabelle AnAus ab

@@ -10,7 +10,8 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="42*"/>
             <ColumnDefinition Width="41*"/>
-            <ColumnDefinition Width="550*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="508*"/>
             <ColumnDefinition Width="152*"/>
             <ColumnDefinition Width="211*"/>
         </Grid.ColumnDefinitions>
@@ -25,15 +26,15 @@
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
 
-        <TextBox x:Name="Chatbox"  TextWrapping="Wrap" IsReadOnly="True"  BorderBrush="#FF1CA8C7" BorderThickness="4" Background="White" Grid.RowSpan="6" Margin="2" Grid.ColumnSpan="4"/>
-        <Button x:Name="senbut"  Content="Senden"  Margin="2" Click="senbut_Click" BorderBrush="LightGreen" Foreground="Black" Background="LightGreen" FontSize="16" Grid.Row="6" Grid.Column="3">
+        <TextBox x:Name="Chatbox"  TextWrapping="Wrap" IsReadOnly="True"  BorderBrush="#FF1CA8C7" BorderThickness="4" Background="White" Grid.RowSpan="6" Margin="2" Grid.ColumnSpan="5"/>
+        <Button x:Name="senbut"  Content="Senden"  Margin="2" Click="senbut_Click" BorderBrush="LightGreen" Foreground="Black" Background="LightGreen" FontSize="16" Grid.Row="6" Grid.Column="4">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <TextBox  x:Name="writebox" VerticalContentAlignment="Center" Margin="45,3,3,3" TextWrapping="Wrap" Text=". . . " FontSize="22" TextChanged="writebox_TextChanged" BorderThickness="4" Foreground="black" BorderBrush="#FF9EDA55" Background="White" KeyDown="writebox_KeyDown" Grid.Row="6" Grid.Column="2" PreviewKeyDown="writebox_PreviewKeyDown">
+        <TextBox  x:Name="writebox" VerticalContentAlignment="Center" Margin="3" TextWrapping="Wrap" Text=". . . " FontSize="22" TextChanged="writebox_TextChanged" BorderThickness="4" Foreground="black" BorderBrush="#FF9EDA55" Background="White" KeyDown="writebox_KeyDown" Grid.Row="6" Grid.Column="3" PreviewKeyDown="writebox_PreviewKeyDown">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="7"/>
@@ -43,20 +44,23 @@
         <Button x:Name="switchmode"  Margin="2" RenderTransformOrigin="1.442,0.157" FontSize="22" Background="Transparent" BorderBrush="Transparent" Click="switchmode_Click" Grid.Row="6">
             <Image Source="classes-dark-mode-icon.png"></Image>
         </Button>
-        <Button x:Name="speicherdateiae" Content="Speicherdatei ändern" Background="LightBlue"  Click="speicherdateiae_Click" Grid.Row="1" Margin="2" Grid.Column="4" />
-        <Button x:Name="speicherdateidel" Content="Speicherdatei löschen" Background="LightCyan" Click="speicherdateidel_Click" Grid.Column="4" Grid.Row="0" Margin="2" />
-        <Button x:Name="beenden" Content="Applikation Beenden" Background="LightCoral" Margin="2" Click="beenden_click" Grid.Row="6" Grid.Column="4" />
-        <Button x:Name="speicherdateiers" Background="GreenYellow" Content="Speicherdatei erstellen" Margin="2" Click="speicherdateiers_Click" Grid.Row="2" Grid.Column="4"  />
-        <Button x:Name="neustart" Content="Applikation neustarten" Background="Yellow" Margin="2" Click="neustart_Click" Grid.Row="5" Grid.Column="4"/>
-        <Image x:Name="totenkopf" Visibility="Hidden" HorizontalAlignment="Left" Height="419" Margin="45,0,-188,-9" VerticalAlignment="Top" Width="1056" Source="OIP.jpg" Grid.ColumnSpan="3" Grid.RowSpan="8" Grid.Column="2"  >
+        <Button x:Name="speicherdateiae" Content="Speicherdatei ändern" Background="LightBlue"  Click="speicherdateiae_Click" Grid.Row="1" Margin="2" Grid.Column="5" />
+        <Button x:Name="speicherdateidel" Content="Speicherdatei löschen" Background="LightCyan" Click="speicherdateidel_Click" Grid.Column="5" Grid.Row="0" Margin="2" />
+        <Button x:Name="beenden" Content="Applikation Beenden" Background="LightCoral" Margin="2" Click="beenden_click" Grid.Row="6" Grid.Column="5" />
+        <Button x:Name="speicherdateiers" Background="GreenYellow" Content="Speicherdatei erstellen" Margin="2" Click="speicherdateiers_Click" Grid.Row="2" Grid.Column="5"  />
+        <Button x:Name="neustart" Content="Applikation neustarten" Background="Yellow" Margin="2" Click="neustart_Click" Grid.Row="5" Grid.Column="5"/>
+        <Image x:Name="totenkopf" Visibility="Hidden" HorizontalAlignment="Left" Height="419" Margin="3,0,-188,-9" VerticalAlignment="Top" Width="1056" Source="OIP.jpg" Grid.ColumnSpan="3" Grid.RowSpan="8" Grid.Column="3"  >
             <Image.OpacityMask>
                 <ImageBrush ImageSource="OIP.jpg" Opacity="0.3" />
             </Image.OpacityMask>
         </Image>
-        <Button x:Name="verlauflöschen" Content="Verlauf löschen" Margin="2" Background="Orange" Click="verlauflöschen_Click" Grid.Row="4" Grid.Column="4"/>
-        <Button x:Name="verlaufanzeigen" Content="Verlauf anzeigen" Margin="2" Background="LightSalmon" Click="verlaufanzeigen_Click" Grid.Row="3" Grid.Column="4"/>
+        <Button x:Name="verlauflöschen" Content="Verlauf löschen" Margin="2" Background="Orange" Click="verlauflöschen_Click" Grid.Row="4" Grid.Column="5"/>
+        <Button x:Name="verlaufanzeigen" Content="Verlauf anzeigen" Margin="2" Background="LightSalmon" Click="verlaufanzeigen_Click" Grid.Row="3" Grid.Column="5"/>
         <Button x:Name="sync"  Margin="1,2,2,2" RenderTransformOrigin="1.442,0.157" FontSize="22" Background="Transparent" BorderBrush="Transparent" Click="sync_Click" Grid.Row="6" Grid.Column="1">
             <Image Source="Sync.png"/>
+        </Button>
+        <Button Background="Transparent" BorderBrush="Transparent" Grid.Column="2" HorizontalAlignment="Left" Margin="3" Grid.Row="6" Click="Button_Click" >
+            <Image Source="DB.png"></Image>
         </Button>
     </Grid>
 </Window>
